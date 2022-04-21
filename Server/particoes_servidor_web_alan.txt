@@ -1,0 +1,28 @@
+Sist. Arq.      Tam. Usado Disp. Uso% Montado em
+udev            979M     0  979M   0% /dev
+tmpfs           199M  3,4M  196M   2% /run
+/dev/sda1        46G   59M   44G   1% /
+/dev/sda7        69G  1,9G   64G   3% /usr
+tmpfs           994M   63M  931M   7% /dev/shm
+tmpfs           5,0M     0  5,0M   0% /run/lock
+tmpfs           994M     0  994M   0% /sys/fs/cgroup
+/dev/sda6        92G  419M   87G   1% /var
+/dev/sda3        19G  441M   17G   3% /home
+/dev/sda2       361M   47M  292M  14% /boot
+tmpfs           199M  4,0K  199M   1% /run/user/1000
+Disco /dev/sda: 232,9 GiB, 250059350016 bytes, 488397168 setores
+Modelo de disco: MAXTOR STM325031
+Unidades: setor de 1 * 512 = 512 bytes
+Tamanho de setor (lógico/físico): 512 bytes / 512 bytes
+Tamanho E/S (mínimo/ótimo): 512 bytes / 512 bytes
+Tipo de rótulo do disco: dos
+Identificador do disco: 0x07045ffa
+
+Dispositivo Inicializar    Início       Fim   Setores Tamanho Id Tipo
+/dev/sda1                    2048  97656831  97654784   46,6G 83 Linux
+/dev/sda2   *            97656832  98437119    780288    381M 83 Linux
+/dev/sda3                98437120 137498623  39061504   18,6G 83 Linux
+/dev/sda4               137500670 488396799 350896130  167,3G  5 Estendida
+/dev/sda5               137500672 145311743   7811072    3,7G 82 Linux swap / Solaris
+/dev/sda6               145313792 340623359 195309568   93,1G 83 Linux
+/dev/sda7               340625408 488396799 147771392   70,5G 83 Linux
