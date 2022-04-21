@@ -1,0 +1,23 @@
+Estrutura de diretório comum
+Uma pergunta comum entre quem está começando a escrever programas para a web é: 
+“onde coloco minhas coisas?” 
+Ao longo dos anos, essa resposta tem sido consistentemente “onde DocumentRoot está”. 
+Embora esta resposta não esteja completa, é um ótimo lugar para começar.
+
+Por motivos de segurança, os arquivos de configuração não devem ser acessados pelos 
+visitantes de um site; portanto, os scripts públicos são mantidos em um diretório público 
+e as configurações e dados privados são mantidos fora desse diretório.
+
+Para cada equipe, CMS ou estrutura em que se trabalha, uma estrutura de diretório padrão 
+é usada por cada uma dessas entidades. 
+No entanto, se alguém está iniciando um projeto sozinho, saber qual estrutura de sistema 
+de arquivos usar pode ser assustador.
+
+Paul M. Jones fez uma pesquisa fantástica sobre as práticas comuns de dezenas de milhares 
+de projetos do github no domínio do PHP. Ele compilou uma estrutura padrão de arquivos e 
+diretórios, o Standard PHP Package Skeleton , com base nesta pesquisa. 
+Nesta estrutura de diretórios, DocumentRoot deve apontar para public/, os testes de unidade 
+devem estar no diretorio tests/, e as bibliotecas de terceiros, conforme instaladas pelo composer, 
+devem estar no diretorio vendor/. 
+Para outros arquivos e diretórios, seguir o Standard PHP Package Skeleton fará mais sentido para 
+os contribuidores de um projeto.

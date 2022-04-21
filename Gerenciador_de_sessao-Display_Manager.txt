@@ -1,0 +1,24 @@
++|DISPLAY MANAGER - Gerenciador de Sessão(Login)|+
+
+Um gerenciador de sessão é um programa que provê capacidades de login
+grafico para o 'X window System'.
+Somente um gerenciador de sessão pode gerenciar um dado servidor X,
+mas diversos pacotes de gerenciados de sessão estão instalados.
+Multiplos gerenciadores de sessão podem ser executados simultaneamente
+se eles estão configurados para gerenciar servidores diferentes.
+Pra conseguir isso, configure os gerencidores de sessão apropriadamente,
+edite seus scripts de inicialização em '/etc/init.d' e desabilite a checagem
+por um gerenciado de sessão padrão.
+
++|Como mudar o Display manager Padrão|+
+Alterar o gerenciador de sessão padrão:
+1 - Editar o arquivo de configuração:
+~$ sudo vim /etc/X11/default-display-manager
+Por exemplo, trocar o '/usr/bin/lightdm' por '/usr/bin/xdm'
+ou '/usr/bin/slim'.
+
+2 - Usando o comando:
+~$ sudo dpkg-reconfigure <display manager>
+Ex:
+~$ sudo dpkg-reconfigure xdm
+~$ sudo dpkg-reconfigure lightdm

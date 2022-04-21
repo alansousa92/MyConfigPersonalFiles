@@ -1,0 +1,65 @@
++| VM na Oracle Cloud |+
+
++INSTALAR E CONFIGURAR O APACHE E O PHP
+
+Siga estas etapas para configurar sua instância do Oracle Linux.
+1 - Abra o menu de navegação e clique em Compute. Em Compute, clique em Instâncias.
+
+2 - Clique no link para a instância criada na etapa anterior.
+Na página Detalhes da Instância, procure na seção Acesso à Instância. 
+Anote o Endereço IP Público criado pelo sistema para você. 
+Você usa esse endereço IP para se conectar à sua instância.
+
+3 - Abra uma janela Terminal ou Prompt de Comando.
+
+4 - Altere o diretório no qual você armazenou as chaves de criptografia ssh criadas na parte 1.
+
+5 - Conecte-se à sua instância com este comando SSH:
+ssh -i <your-private-key-file> opc@<x.x.x.x>
+
+Como você identificou sua chave pública quando criou a instância, esse comando 
+o registrará em sua instância. 
+Agora você pode executar comandos sudo para instalar e iniciar seu servidor.
+
+6 - Instale o Servidor Apache:
+sudo yum install -y httpd
+
+7 - Ative o apache:
+sudo systemctl enable httpd
+
+8 - Inicie o apache:
+sudo systemctl restart httpd
+
+9 - Ative a conexão HTTP por meio da porta 80:
+sudo firewall-cmd --add-service=http --permanent
+
+OBSERVAÇÃO:
+Se você pretende configurar o HTTPS posteriormente (recomendado), também ative as conexões HTTPS na porta 443:
+sudo firewall-cmd --add-service=https --permanent
+
+10 - Recarregue o firewall:
+sudo firewall-cmd --reload
+
+11 - Agora você pode testar seu servidor.
+Você pode testar seu servidor na linha de comando com:
+~# curl localhost
+
+Como alternativa, você pode conectar o seu browser ao endereço 
+IP público designado à sua instância: http://<x.x.x.x.x>.
+
+OBSERVAÇÃO:
+Obtenha o endereço IP na página de detalhes da sua instância de computação. 
+No menu principal, selecione Compute e Instâncias. Selecione a instância 
+de computação criada. O endereço IP é listado no campo Endereço IP Público.
+
++INSTALAR E CONFIGURAR O PHP+
+
+Instale e configure o PHP para ser executado na sua instância do Oracle Linux.
+
+1 - Configure o repositório do pacote Oracle Linux para usar o PHP 7.
+sudo yum install -y oracle-php-release-el7
+
+Após a execução do comando, o yum instala o PHP 7 por padrão, em vez do PHP 5.
+
+2 - Instale o PHP 7.
+sudo yum install -y php

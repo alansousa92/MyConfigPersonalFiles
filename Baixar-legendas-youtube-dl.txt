@@ -1,0 +1,1 @@
+youtube-dl --write-auto-sub --sub-lang pt --convert-subs srt --skip-download

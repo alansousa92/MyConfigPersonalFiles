@@ -1,0 +1,9 @@
++1 - Configura Papel de parede(Wallpaper)+
+Instale o Feh ou Nitrogen.
+~$ sudo apt instal feh
+~$ sudo apt install nitrogen
+
+Configure no arquivo de configuração do i3(~/.config/i3/config):
+exec_always feh --bg-scale <path da imagem>
+
+Para uma barra de status, baixe i3blocks ou bumblebee-status:
